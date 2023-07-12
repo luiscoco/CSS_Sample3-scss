@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+@import 'placeholders';
+
+body {
+  background-color: $bg-color;
+}
+
+.parent {
+  background-color: $parent-color;
+  @include size(200px);
+  @include center;
+}
+
+.child {
+  background-color: $child-color;
+  @include size(100px);
+  @include center;
+  @include hoverable;
+}
+
+.parent--round {
+  @extend %round;
+  background-color: $parent-color;
+  @include size(200px);
+  @include center;
+}
+
+.child--round {
+  @extend %round;
+  background-color: $child-color;
+  @include size(100px);
+  @include center;
+  @include hoverable;
+}
+
